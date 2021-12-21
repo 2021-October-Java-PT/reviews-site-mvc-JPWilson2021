@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Best Kdramas of 2021</title>
+</head>
+<body>
+<header>
+    <h1>2021 Kdramas</h1>
+</header>
+<main>
+    <ul>
+        <li th:each="kdrama: ${kdramasModel}"><a th:href="@{/kdrama(id=${kdrama.id})}" th:text="${kdrama.name}"></a></li>
+    </ul>
+</main>
+<footer>
+    <small>&copy wcci 2021</small>
+</footer>
+</body>
+</html>
