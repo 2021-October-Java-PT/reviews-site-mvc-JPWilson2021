@@ -2,12 +2,12 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Best Kdramas of 2021</title>
-    <link rel="stylesheet" href="" th:href="@{/css/style.css}">
+    <link rel="stylesheet" href=".\css\style.css">
 </head>
 <body>
     <div class="container">
         <div class="navbar">
-            <img src="src\main\resources\images\Seoul.png" class="logo">
+            <img src="https://cdn.britannica.com/84/206384-050-00698723/Javan-gliding-tree-frog.jpg" class="logo">
             <nav>
                 <ul>
                     <li th:each="kdrama: ${kdramasModel}"><a th:href="@{/kdrama(id=${kdrama.id})}" th:text="${kdrama.name}"></a></li>
