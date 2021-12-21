@@ -2,16 +2,34 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Best Kdramas of 2021</title>
+    <link rel="stylesheet" href="kdramasTemplate.css">
 </head>
 <body>
-<header>
+    <div class="container">
+        <div class="navbar">
+            <img src="src\main\resources\images\Seoul.png" class="logo">
+            <nav>
+                <ul>
+                    <li th:each="kdrama: ${kdramasModel}"><a th:href="@{/kdrama(id=${kdrama.id})}" th:text="${kdrama.name}"></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <a href="">My Favorite Kdrama of all time</a>
+            <h1>Boys Over Flowers</h1>
+            <p>Oppa Lee Min Ho!</p>
+
+        </div>
+
+    </div>
+<!-- <header>
     <h1>2021 Kdramas</h1>
 </header>
 <main>
     <ul>
         <li th:each="kdrama: ${kdramasModel}"><a th:href="@{/kdrama(id=${kdrama.id})}" th:text="${kdrama.name}"></a></li>
     </ul>
-</main>
+</main> -->
 <footer>
     <small>&copy wcci 2021</small>
 </footer>

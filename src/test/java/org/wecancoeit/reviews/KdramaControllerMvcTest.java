@@ -46,6 +46,8 @@ public class KdramaControllerMvcTest {
 
     @Test
     public void shouldBeOkForOneKdramaInTheKdramaTemplate() throws Exception{
+        Long kdramaOneId = 1L;
+        when(kdramaRepo.findOne(kdramaOneId)).thenReturn(kdramaOne);
         mockMvc.perform(get("/kdrama?id=1")).andExpect(status().isOk())
                 .andExpect(view().name("kdramaTemplate"));
     }
