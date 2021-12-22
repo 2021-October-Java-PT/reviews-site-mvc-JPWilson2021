@@ -10,8 +10,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class KdramaReviewsRepositoryTest {
 
     private KdramaReviewsRepository underTest;
-    private Kdrama kdramaOne = new Kdrama(1L, "kdrama one title", "description");
-    private Kdrama kdramaTwo = new Kdrama(2L, "kdrama two title", "description");
+    private Kdrama kdramaOne = new Kdrama(1L, "kdrama one title", "description","imgUrl","genre");
+    private Kdrama kdramaTwo = new Kdrama(2L, "kdrama two title", "description", "imgUrl", "genre");
 
     @Test
     public void shouldFindKdramaOne() {

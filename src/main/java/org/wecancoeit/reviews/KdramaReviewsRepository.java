@@ -12,13 +12,13 @@ public class KdramaReviewsRepository {
     Map<Long, Kdrama> kdramaList = new HashMap<>();
 
     public KdramaReviewsRepository(){
-        Kdrama action = new Kdrama(1L,"Action", "2021 Action Kdrama");
-        Kdrama romanticComedy = new Kdrama(2L,"Rom-Com", "2021 Romantic Comedy Kdrama");
-        Kdrama historical = new Kdrama(3L, "Historical", "2021 Historical Kdrama");
+        Kdrama cloy = new Kdrama(1L,"Crash Landing On You", "Romance Between a South Korean Heiress and a North Korean Military Officer","images/cloy.jpg","romance");
+        Kdrama reply = new Kdrama(2L,"Reply 1988", "Story of five childhood friends", "images/reply1988.jpg", "Comedy/Romance");
+        Kdrama goblin = new Kdrama(3L, "Goblin", "Story of a 939-year-old Goblin who fell in love with a mortal", "images/Goblin.jpg", "Romance");
 
-        kdramaList.put(action.getId(), action);
-        kdramaList.put(romanticComedy.getId(), romanticComedy);
-        kdramaList.put(historical.getId(), historical);
+        kdramaList.put(cloy.getId(), cloy);
+        kdramaList.put(reply.getId(), reply);
+        kdramaList.put(goblin.getId(), goblin);
     }
 
     public KdramaReviewsRepository(Kdrama ...kdramasToAdd) {

@@ -6,8 +6,9 @@
 </head>
 <body>
     <div class="container">
+        <img src="./images/bgimage.png" class="background-image">
         <div class="navbar">
-            <img src="https://cdn.britannica.com/84/206384-050-00698723/Javan-gliding-tree-frog.jpg" class="logo">
+            <img src=".\images\Seoul.png" class="logo">
             <nav>
                 <ul>
                     <li th:each="kdrama: ${kdramasModel}"><a th:href="@{/kdrama(id=${kdrama.id})}" th:text="${kdrama.name}"></a></li>
